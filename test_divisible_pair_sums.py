@@ -26,3 +26,17 @@ class DivsibilePairSumsTest(unittest.TestCase):
         self.assertEqual(5, first.answer_question())
         self.assertEqual(15, second.answer_question())
         self.assertEqual(216, third.answer_question())
+
+    def test_validate_input(self):
+        first = DivisiblePairSums(n=0, k=3, ar=[1, 2, 3])
+        second = DivisiblePairSums(n=101, k=3, ar=[1, 2, 3])
+        third = DivisiblePairSums(n=2, k=0, ar=[1, 2, 3])
+        fourth = DivisiblePairSums(n=2, k=101, ar=[1, 2, 3])
+        fifth = DivisiblePairSums(n=2, k=1, ar=[])
+        sixth = DivisiblePairSums(n=2, k=1, ar=[x for x in range(0, 102)])
+        self.assertEqual("Error: invalid input", first.answer_question())
+        self.assertEqual("Error: invalid input", second.answer_question())
+        self.assertEqual("Error: invalid input", third.answer_question())
+        self.assertEqual("Error: invalid input", fourth.answer_question())
+        self.assertEqual("Error: invalid input", fifth.answer_question())
+        self.assertEqual("Error: invalid input", sixth.answer_question())
