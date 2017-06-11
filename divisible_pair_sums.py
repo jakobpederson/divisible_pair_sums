@@ -8,5 +8,5 @@ class DivisiblePairSums():
 
     def answer_question(self):
         return len(
-            [(x, y) for x in self.ints for y in self.ints if (x + y) % self.k == 0 and x > y]
+            [(x, y) for x in self.ints for y in self.ints if (x + y) % self.k == 0 and x < y]
         )
