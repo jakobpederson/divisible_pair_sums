@@ -23,7 +23,6 @@ class DivsibilePairSumsTest(unittest.TestCase):
         first = DivisiblePairSums(DATA1.n, DATA1.k, DATA1.ar)
         second = DivisiblePairSums(DATA2.n, DATA2.k, DATA2.ar)
         third = DivisiblePairSums(DATA3.n, DATA3.k, DATA3.ar)
-        self.fail(third.answer_question_2())
         self.assertEqual(5, first.answer_question())
         self.assertEqual(15, second.answer_question())
         self.assertEqual(216, third.answer_question())
